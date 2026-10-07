@@ -48,7 +48,7 @@ jobs:
         run: python setup.py build_ext --inplace
 
       - name: Run Python tests
-        run: python -m unittest discover -s bindings/python/tests
+        run: PYTHONPATH=. python -m unittest discover -s bindings/python/tests
 
   publish-npm:
     name: Publish to npm
